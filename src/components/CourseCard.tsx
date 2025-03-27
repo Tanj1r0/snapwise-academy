@@ -1,6 +1,5 @@
 
 import { Link } from 'react-router-dom';
-import LazyImage from './LazyImage';
 
 interface CourseCardProps {
   id: number;
@@ -23,7 +22,7 @@ const CourseCard = ({ id, title, instructor, description, price, imageSrc, level
   return (
     <div className="course-card rounded-lg bg-white shadow-md overflow-hidden">
       <div className="course-img-wrapper">
-        <LazyImage src={imageSrc} alt={title} className="course-img" />
+        <img src={imageSrc} alt={title} className="course-img" />
       </div>
       <div className="p-6">
         <div className="flex justify-between items-start mb-3">

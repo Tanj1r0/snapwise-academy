@@ -1,9 +1,5 @@
-
-import { useState } from 'react';
-
-interface Props {
-  onFilterChange: (filters: Filters) => void;
-}
+import { useState, useEffect } from 'react';
+import { Slider } from './ui/slider';
 
 export interface Filters {
   levels: string[];
@@ -11,7 +7,11 @@ export interface Filters {
   duration: string[];
 }
 
-const CourseFilter = ({ onFilterChange }: Props) => {
+interface CourseFilterProps {
+  onFilterChange: (filters: Filters) => void;
+}
+
+const CourseFilter = ({ onFilterChange }: CourseFilterProps) => {
   const [filters, setFilters] = useState<Filters>({
     levels: [],
     priceRange: [0, 500],
@@ -45,6 +45,16 @@ const CourseFilter = ({ onFilterChange }: Props) => {
     const newFilters = { ...filters, priceRange: newPriceRange };
     setFilters(newFilters);
     onFilterChange(newFilters);
+  };
+
+  const handleReset = () => {
+    const resetFilters: Filters = {
+      levels: [],
+      priceRange: [0, 500],
+      duration: [],
+    };
+    setFilters(resetFilters);
+    onFilterChange(resetFilters);
   };
 
   return (
@@ -117,15 +127,7 @@ const CourseFilter = ({ onFilterChange }: Props) => {
         {/* Reset Filters */}
         <button
           className="w-full py-2 px-4 border border-gray-300 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-primary/20"
-          onClick={() => {
-            const resetFilters = {
-              levels: [],
-              priceRange: [0, 500],
-              duration: [],
-            };
-            setFilters(resetFilters);
-            onFilterChange(resetFilters);
-          }}
+          onClick={handleReset}
         >
           Reset Filters
         </button>
