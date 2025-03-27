@@ -1,4 +1,3 @@
-
 import Layout from '../components/Layout';
 import InstructorCard from '../components/InstructorCard';
 
@@ -86,7 +85,7 @@ const Instructors = () => {
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {instructors.map((instructor, index) => (
-              <div key={index} className="animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
+              <div key={index}>
                 <InstructorCard {...instructor} />
               </div>
             ))}
@@ -97,7 +96,7 @@ const Instructors = () => {
       <section className="py-12 md:py-20 bg-primary text-white">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="animate-fade-in">
+            <div>
               <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-6">Присоединяйтесь к нашей команде преподавателей</h2>
               <p className="text-white/80 mb-6">
                 Вы эксперт в фотографии, увлеченный передачей своих знаний? Мы всегда ищем талантливых инструкторов для присоединения к нашей команде.
@@ -127,7 +126,7 @@ const Instructors = () => {
               </button>
             </div>
             
-            <div className="relative animate-fade-in" style={{ animationDelay: "0.2s" }}>
+            <div className="relative">
               <div className="absolute inset-0 bg-white/5 backdrop-blur-sm rounded-lg transform rotate-3"></div>
               <img
                 src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7"

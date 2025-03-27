@@ -1,7 +1,5 @@
-
 import { useEffect } from 'react';
 import Layout from '../components/Layout';
-import LazyImage from '../components/LazyImage';
 
 const About = () => {
   useEffect(() => {
@@ -39,7 +37,7 @@ const About = () => {
             <div className="order-1 lg:order-2 reveal">
               <div className="relative">
                 <div className="absolute inset-0 bg-primary/5 rounded-lg transform rotate-3"></div>
-                <LazyImage 
+                <img 
                   src="https://images.unsplash.com/photo-1469474968028-56623f02e42e" 
                   alt="Our story" 
                   className="relative rounded-lg shadow-md overflow-hidden z-10"
