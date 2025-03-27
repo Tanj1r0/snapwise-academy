@@ -1,4 +1,3 @@
-
 import LazyImage from './LazyImage';
 
 interface InstructorCardProps {
@@ -17,7 +16,7 @@ const InstructorCard = ({ name, role, bio, imageSrc, socialLinks }: InstructorCa
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden">
       <div className="aspect-square overflow-hidden">
-        <LazyImage 
+        <img 
           src={imageSrc} 
           alt={name} 
           className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"

@@ -88,7 +88,7 @@ const Courses = () => {
     }
     
     // Фильтр по цене
-    result = result.filter(course => course.price <= filters.priceRange[1] * 100);
+    result = result.filter(course => course.price <= filters.priceRange[1]);
     
     // Фильтр по продолжительности (упрощенный подход)
     if (filters.duration.length > 0) {

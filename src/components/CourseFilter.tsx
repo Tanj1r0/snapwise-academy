@@ -15,7 +15,7 @@ interface CourseFilterProps {
 const CourseFilter = ({ onFilterChange }: CourseFilterProps) => {
   const [filters, setFilters] = useState<Filters>({
     levels: [],
-    priceRange: [0, 500],
+    priceRange: [0, 50000],
     duration: [],
   });
 
@@ -51,7 +51,7 @@ const CourseFilter = ({ onFilterChange }: CourseFilterProps) => {
   const handleReset = () => {
     const resetFilters: Filters = {
       levels: [],
-      priceRange: [0, 500],
+      priceRange: [0, 50000],
       duration: [],
     };
     setFilters(resetFilters);
@@ -95,7 +95,7 @@ const CourseFilter = ({ onFilterChange }: CourseFilterProps) => {
             <input
               type="range"
               min="0"
-              max="500"
+              max="50000"
               step="50"
               value={filters.priceRange[1]}
               onChange={handlePriceChange}

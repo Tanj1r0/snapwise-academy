@@ -200,7 +200,7 @@ const Index = () => {
               </p>
             </div>
             <Link to="/courses" className="mt-4 md:mt-0 btn-secondary">
-              View All Courses
+              Посмотреть все курсы
             </Link>
           </div>
           
@@ -243,7 +243,7 @@ const Index = () => {
           
           <div className="text-center mt-12 reveal">
             <Link to="/instructors" className="btn-secondary">
-              View All Instructors
+              Посмотреть всех инструкторов
             </Link>
           </div>
         </div>
