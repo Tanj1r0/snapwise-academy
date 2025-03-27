@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import Layout from '../components/Layout';
 import { toast } from 'sonner';
@@ -25,7 +24,7 @@ const Contact = () => {
     // Simulate API call
     setTimeout(() => {
       setFormStatus('success');
-      toast.success('Your message has been sent! We will get back to you soon.');
+      toast.success('Ваше сообщение было отправлено! Мы свяжемся с вами в ближайшее время.');
       setFormData({
         name: '',
         email: '',
@@ -40,9 +39,9 @@ const Contact = () => {
       <section className="py-12 md:py-20 bg-secondary/30">
         <div className="container-custom">
           <div className="text-center max-w-3xl mx-auto">
-            <h1 className="font-serif text-3xl md:text-5xl font-semibold mb-4 animate-fade-in">Contact Us</h1>
+            <h1 className="font-serif text-3xl md:text-5xl font-semibold mb-4 animate-fade-in">Свяжитесь с нами</h1>
             <p className="text-muted-foreground animate-slide-in">
-              Have questions or feedback? We'd love to hear from you.
+              Есть вопросы или предложения? Мы будем рады услышать вас.
             </p>
           </div>
         </div>
@@ -52,11 +51,11 @@ const Contact = () => {
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="bg-white p-8 rounded-lg shadow-md animate-fade-in">
-              <h2 className="font-serif text-2xl font-semibold mb-6">Send Us a Message</h2>
+              <h2 className="font-serif text-2xl font-semibold mb-6">Отправьте нам сообщение</h2>
               
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Ваше имя</label>
                   <input
                     type="text"
                     id="name"
@@ -69,7 +68,7 @@ const Contact = () => {
                 </div>
                 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Адрес электронной почты</label>
                   <input
                     type="email"
                     id="email"
@@ -82,7 +81,7 @@ const Contact = () => {
                 </div>
                 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">Тема</label>
                   <select
                     id="subject"
                     name="subject"
@@ -91,17 +90,17 @@ const Contact = () => {
                     required
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
                   >
-                    <option value="">Select a subject</option>
-                    <option value="Course Question">Course Question</option>
-                    <option value="Technical Support">Technical Support</option>
-                    <option value="Billing Inquiry">Billing Inquiry</option>
-                    <option value="Partnership Opportunity">Partnership Opportunity</option>
-                    <option value="Other">Other</option>
+                    <option value="">Выберите тему</option>
+                    <option value="Course Question">Вопрос о курсе</option>
+                    <option value="Technical Support">Техническая поддержка</option>
+                    <option value="Billing Inquiry">Вопрос по оплате</option>
+                    <option value="Partnership Opportunity">Возможность партнерства</option>
+                    <option value="Other">Другое</option>
                   </select>
                 </div>
                 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Ваше сообщение</label>
                   <textarea
                     id="message"
                     name="message"
@@ -124,10 +123,10 @@ const Contact = () => {
                         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                         <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                       </svg>
-                      Sending...
+                      Отправка...
                     </span>
                   ) : (
-                    'Send Message'
+                    'Отправить сообщение'
                   )}
                 </button>
               </form>
@@ -135,7 +134,7 @@ const Contact = () => {
             
             <div className="space-y-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
               <div>
-                <h2 className="font-serif text-2xl font-semibold mb-6">Contact Information</h2>
+                <h2 className="font-serif text-2xl font-semibold mb-6">Контактная информация</h2>
                 
                 <div className="space-y-4">
                   <div className="flex items-start">
@@ -145,9 +144,9 @@ const Contact = () => {
                       </svg>
                     </div>
                     <div className="ml-4">
-                      <h3 className="text-lg font-semibold mb-1">Phone</h3>
+                      <h3 className="text-lg font-semibold mb-1">Телефон</h3>
                       <p className="text-muted-foreground">+1 (555) 123-4567</p>
-                      <p className="text-muted-foreground text-sm">Mon-Fri from 9am to 6pm EST</p>
+                      <p className="text-muted-foreground text-sm">Пн-Пт с 9:00 до 18:00 по восточному времени</p>
                     </div>
                   </div>
                   
@@ -158,9 +157,9 @@ const Contact = () => {
                       </svg>
                     </div>
                     <div className="ml-4">
-                      <h3 className="text-lg font-semibold mb-1">Email</h3>
+                      <h3 className="text-lg font-semibold mb-1">Электронная почта</h3>
                       <p className="text-muted-foreground">support@photomasters.com</p>
-                      <p className="text-muted-foreground text-sm">We'll respond as soon as possible</p>
+                      <p className="text-muted-foreground text-sm">Мы ответим как можно скорее</p>
                     </div>
                   </div>
                   
@@ -172,32 +171,32 @@ const Contact = () => {
                       </svg>
                     </div>
                     <div className="ml-4">
-                      <h3 className="text-lg font-semibold mb-1">Location</h3>
+                      <h3 className="text-lg font-semibold mb-1">Адрес</h3>
                       <p className="text-muted-foreground">123 Photography Lane</p>
-                      <p className="text-muted-foreground">New York, NY 10001</p>
+                      <p className="text-muted-foreground">Нью-Йорк, NY 10001</p>
                     </div>
                   </div>
                 </div>
               </div>
               
               <div className="bg-secondary/50 p-8 rounded-lg">
-                <h3 className="font-serif text-xl font-semibold mb-4">Frequently Asked Questions</h3>
+                <h3 className="font-serif text-xl font-semibold mb-4">Часто задаваемые вопросы</h3>
                 <div className="space-y-4">
                   <div>
-                    <h4 className="font-medium mb-1">How can I access my courses after purchase?</h4>
-                    <p className="text-sm text-muted-foreground">After purchasing, you can access all your courses by logging into your account and visiting the "My Courses" section.</p>
+                    <h4 className="font-medium mb-1">Как я могу получить доступ к своим курсам после покупки?</h4>
+                    <p className="text-sm text-muted-foreground">После покупки вы можете получить доступ ко всем своим курсам, войдя в свою учетную запись и посетив раздел "Мои курсы".</p>
                   </div>
                   <div>
-                    <h4 className="font-medium mb-1">Do you offer refunds?</h4>
-                    <p className="text-sm text-muted-foreground">Yes, we offer a 30-day money-back guarantee if you're not satisfied with your purchase.</p>
+                    <h4 className="font-medium mb-1">Предоставляете ли вы возврат средств?</h4>
+                    <p className="text-sm text-muted-foreground">Да, мы предоставляем 30-дневную гарантию возврата денег, если вы не удовлетворены своей покупкой.</p>
                   </div>
                   <div>
-                    <h4 className="font-medium mb-1">How long do I have access to the courses?</h4>
-                    <p className="text-sm text-muted-foreground">You have lifetime access to all purchased courses, including any future updates to the course content.</p>
+                    <h4 className="font-medium mb-1">Как долго я буду иметь доступ к курсам?</h4>
+                    <p className="text-sm text-muted-foreground">Вы получаете пожизненный доступ ко всем приобретенным курсам, включая любые будущие обновления содержимого курса.</p>
                   </div>
                   <div>
-                    <h4 className="font-medium mb-1">Can I download the course videos?</h4>
-                    <p className="text-sm text-muted-foreground">Course videos are available for streaming only and cannot be downloaded, but you can access them anytime with an internet connection.</p>
+                    <h4 className="font-medium mb-1">Могу ли я скачать видео курсов?</h4>
+                    <p className="text-sm text-muted-foreground">Видео курсов доступны только для потокового просмотра и не могут быть загружены, но вы можете получить к ним доступ в любое время при наличии интернет-соединения.</p>
                   </div>
                 </div>
               </div>
