@@ -19,6 +19,13 @@ const CourseCard = ({ id, title, instructor, description, price, imageSrc, level
     Advanced: 'bg-purple-100 text-purple-800',
   }[level];
 
+  // Перевод уровней на русский язык
+  const levelTranslation = {
+    Beginner: 'Начинающий',
+    Intermediate: 'Средний',
+    Advanced: 'Продвинутый',
+  }[level];
+
   return (
     <div className="course-card rounded-lg bg-white shadow-md overflow-hidden">
       <div className="course-img-wrapper">
@@ -26,17 +33,17 @@ const CourseCard = ({ id, title, instructor, description, price, imageSrc, level
       </div>
       <div className="p-6">
         <div className="flex justify-between items-start mb-3">
-          <span className={`text-xs font-medium px-2.5 py-1 rounded-full ${levelColor}`}>{level}</span>
-          <span className="text-lg font-semibold">${price}</span>
+          <span className={`text-xs font-medium px-2.5 py-1 rounded-full ${levelColor}`}>{levelTranslation}</span>
+          <span className="text-lg font-semibold">{price} ₽</span>
         </div>
         <h3 className="font-serif text-xl font-semibold mb-2">{title}</h3>
         <p className="text-sm text-muted-foreground mb-4 line-clamp-2">{description}</p>
         <div className="flex justify-between items-center mb-4">
-          <span className="text-xs text-muted-foreground">By {instructor}</span>
+          <span className="text-xs text-muted-foreground">Автор: {instructor}</span>
           <span className="text-xs text-muted-foreground">{duration}</span>
         </div>
         <Link to={`/courses/${id}`} className="btn-primary w-full text-center">
-          View Course
+          Подробнее
         </Link>
       </div>
     </div>

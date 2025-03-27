@@ -4,67 +4,67 @@ import Layout from '../components/Layout';
 import CourseCard from '../components/CourseCard';
 import CourseFilter, { Filters } from '../components/CourseFilter';
 
-// Sample data for courses
+// Пример данных для курсов
 const allCourses = [
   {
     id: 1,
-    title: "Photography Fundamentals",
-    instructor: "Anna Reynolds",
-    description: "Master the basics of photography including composition, exposure, and lighting to create stunning images.",
-    price: 79,
+    title: "Основы фотографии",
+    instructor: "Анна Рейнольдс",
+    description: "Освойте основы фотографии, включая композицию, экспозицию и освещение, чтобы создавать потрясающие изображения.",
+    price: 7900,
     imageSrc: "https://images.unsplash.com/photo-1500673922987-e212871fec22",
     level: "Beginner" as const,
-    duration: "12 hours",
+    duration: "12 часов",
   },
   {
     id: 2,
-    title: "Advanced Lighting Techniques",
-    instructor: "Michael Chen",
-    description: "Take your lighting skills to the next level with advanced techniques for portraiture and product photography.",
-    price: 129,
+    title: "Продвинутые техники освещения",
+    instructor: "Михаил Чен",
+    description: "Поднимите свои навыки освещения на новый уровень с продвинутыми техниками для портретной и предметной фотографии.",
+    price: 12900,
     imageSrc: "https://images.unsplash.com/photo-1469474968028-56623f02e42e",
     level: "Advanced" as const,
-    duration: "20 hours",
+    duration: "20 часов",
   },
   {
     id: 3,
-    title: "Landscape Photography Masterclass",
-    instructor: "Sarah Johnson",
-    description: "Learn to capture breathtaking landscapes with proper technique, planning, and post-processing.",
-    price: 99,
+    title: "Мастер-класс по пейзажной фотографии",
+    instructor: "Сара Джонсон",
+    description: "Научитесь снимать захватывающие пейзажи с правильной техникой, планированием и постобработкой.",
+    price: 9900,
     imageSrc: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05",
     level: "Intermediate" as const,
-    duration: "16 hours",
+    duration: "16 часов",
   },
   {
     id: 4,
-    title: "Portrait Photography Essentials",
-    instructor: "Anna Reynolds",
-    description: "Learn how to capture stunning portraits that reveal the personality and emotion of your subjects.",
-    price: 89,
+    title: "Основы портретной фотографии",
+    instructor: "Анна Рейнольдс",
+    description: "Узнайте, как создавать потрясающие портреты, раскрывающие личность и эмоции ваших моделей.",
+    price: 8900,
     imageSrc: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21",
     level: "Beginner" as const,
-    duration: "14 hours",
+    duration: "14 часов",
   },
   {
     id: 5,
-    title: "Mobile Photography Masterclass",
-    instructor: "Jason Patel",
-    description: "Discover how to take professional-quality photos using just your smartphone and basic editing apps.",
-    price: 49,
+    title: "Мастер-класс по мобильной фотографии",
+    instructor: "Джейсон Патель",
+    description: "Узнайте, как делать профессиональные фотографии, используя только ваш смартфон и базовые приложения для редактирования.",
+    price: 4900,
     imageSrc: "https://images.unsplash.com/photo-1426604966848-d7adac402bff",
     level: "Beginner" as const,
-    duration: "8 hours",
+    duration: "8 часов",
   },
   {
     id: 6,
-    title: "Fine Art Photography",
-    instructor: "Sarah Johnson",
-    description: "Develop your artistic vision and create conceptual images that express your creative perspective.",
-    price: 149,
+    title: "Художественная фотография",
+    instructor: "Сара Джонсон",
+    description: "Развивайте своё художественное видение и создавайте концептуальные изображения, выражающие вашу творческую перспективу.",
+    price: 14900,
     imageSrc: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
     level: "Advanced" as const,
-    duration: "22 hours",
+    duration: "22 часа",
   },
 ];
 
@@ -78,19 +78,19 @@ const Courses = () => {
   const [filteredCourses, setFilteredCourses] = useState(allCourses);
   const [searchTerm, setSearchTerm] = useState('');
   
-  // Update filtered courses when filters change
+  // Обновление отфильтрованных курсов при изменении фильтров
   useEffect(() => {
     let result = allCourses;
     
-    // Filter by level
+    // Фильтр по уровню
     if (filters.levels.length > 0) {
       result = result.filter(course => filters.levels.includes(course.level));
     }
     
-    // Filter by price
-    result = result.filter(course => course.price <= filters.priceRange[1]);
+    // Фильтр по цене
+    result = result.filter(course => course.price <= filters.priceRange[1] * 100);
     
-    // Filter by duration (this is a simplified approach)
+    // Фильтр по продолжительности (упрощенный подход)
     if (filters.duration.length > 0) {
       result = result.filter(course => {
         const hours = parseInt(course.duration.split(' ')[0]);
@@ -101,7 +101,7 @@ const Courses = () => {
       });
     }
     
-    // Filter by search term
+    // Фильтр по поисковому запросу
     if (searchTerm) {
       const term = searchTerm.toLowerCase();
       result = result.filter(
@@ -124,9 +124,9 @@ const Courses = () => {
       <section className="py-12 md:py-20 bg-secondary/30">
         <div className="container-custom">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <h1 className="font-serif text-3xl md:text-5xl font-semibold mb-4 animate-fade-in">Photography Courses</h1>
+            <h1 className="font-serif text-3xl md:text-5xl font-semibold mb-4 animate-fade-in">Курсы фотографии</h1>
             <p className="text-muted-foreground animate-slide-in">
-              Explore our comprehensive range of photography courses designed to elevate your skills, no matter your experience level.
+              Исследуйте наш обширный ассортимент курсов фотографии, разработанных для повышения ваших навыков, независимо от вашего уровня подготовки.
             </p>
           </div>
           
@@ -134,7 +134,7 @@ const Courses = () => {
             <div className="relative">
               <input
                 type="text"
-                placeholder="Search courses by title, description or instructor..."
+                placeholder="Поиск курсов по названию, описанию или инструктору..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full h-12 px-4 pr-10 rounded-lg border border-border bg-white focus:outline-none focus:ring-2 focus:ring-primary/20"
@@ -178,9 +178,9 @@ const Courses = () => {
                   >
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
-                  <h3 className="text-xl font-semibold mb-2">No courses found</h3>
+                  <h3 className="text-xl font-semibold mb-2">Курсы не найдены</h3>
                   <p className="text-muted-foreground mb-4">
-                    Try adjusting your filters or search term to find more courses.
+                    Попробуйте изменить параметры фильтрации или поисковый запрос, чтобы найти больше курсов.
                   </p>
                   <button 
                     onClick={() => {
@@ -193,7 +193,7 @@ const Courses = () => {
                     }}
                     className="btn-secondary"
                   >
-                    Reset Filters
+                    Сбросить фильтры
                   </button>
                 </div>
               )}

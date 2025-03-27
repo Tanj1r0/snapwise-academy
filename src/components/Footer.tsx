@@ -9,45 +9,45 @@ const Footer = () => {
       <div className="container-custom py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div className="space-y-4">
-            <h3 className="font-serif text-lg font-medium">PhotoMasters</h3>
+            <h3 className="font-serif text-lg font-medium">ФотоМастера</h3>
             <p className="text-muted-foreground text-sm">
-              Elevating your photography skills through expert-led courses and personalized learning experiences.
+              Повышаем ваши навыки фотографии через экспертные курсы и персонализированное обучение.
             </p>
           </div>
 
           <div className="space-y-4">
-            <h4 className="font-medium text-base">Learn</h4>
+            <h4 className="font-medium text-base">Обучение</h4>
             <ul className="space-y-2">
-              <li><Link to="/courses" className="text-sm text-muted-foreground hover:text-foreground transition-colors">All Courses</Link></li>
-              <li><Link to="/categories" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Categories</Link></li>
-              <li><Link to="/free-resources" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Free Resources</Link></li>
-              <li><Link to="/blog" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Blog</Link></li>
+              <li><Link to="/courses" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Все курсы</Link></li>
+              <li><Link to="/categories" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Категории</Link></li>
+              <li><Link to="/free-resources" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Бесплатные ресурсы</Link></li>
+              <li><Link to="/blog" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Блог</Link></li>
             </ul>
           </div>
 
           <div className="space-y-4">
-            <h4 className="font-medium text-base">Company</h4>
+            <h4 className="font-medium text-base">Компания</h4>
             <ul className="space-y-2">
-              <li><Link to="/about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">About Us</Link></li>
-              <li><Link to="/instructors" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Instructors</Link></li>
-              <li><Link to="/careers" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Careers</Link></li>
-              <li><Link to="/contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Contact</Link></li>
+              <li><Link to="/about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">О нас</Link></li>
+              <li><Link to="/instructors" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Преподаватели</Link></li>
+              <li><Link to="/careers" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Карьера</Link></li>
+              <li><Link to="/contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Контакты</Link></li>
             </ul>
           </div>
 
           <div className="space-y-4">
-            <h4 className="font-medium text-base">Legal</h4>
+            <h4 className="font-medium text-base">Юридическая информация</h4>
             <ul className="space-y-2">
-              <li><Link to="/terms" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Terms of Service</Link></li>
-              <li><Link to="/privacy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Privacy Policy</Link></li>
-              <li><Link to="/cookie-policy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Cookie Policy</Link></li>
+              <li><Link to="/terms" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Условия использования</Link></li>
+              <li><Link to="/privacy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Политика конфиденциальности</Link></li>
+              <li><Link to="/cookie-policy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Политика использования файлов cookie</Link></li>
             </ul>
           </div>
         </div>
 
         <div className="mt-12 pt-6 border-t border-border flex flex-col md:flex-row justify-between items-center">
           <p className="text-xs text-muted-foreground">
-            © {currentYear} PhotoMasters. All rights reserved.
+            © {currentYear} ФотоМастера. Все права защищены.
           </p>
           <div className="mt-4 md:mt-0">
             <ul className="flex space-x-6">
