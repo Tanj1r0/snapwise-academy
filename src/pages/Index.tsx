@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Layout from '../components/Layout';
@@ -10,41 +9,41 @@ import LazyImage from '../components/LazyImage';
 const courses = [
   {
     id: 1,
-    title: "Photography Fundamentals",
-    instructor: "Anna Reynolds",
-    description: "Master the basics of photography including composition, exposure, and lighting to create stunning images.",
+    title: "Основы фотографии",
+    instructor: "Анна Рейнольдс",
+    description: "Освойте основы фотографии, включая композицию, экспозицию и освещение, чтобы создавать потрясающие изображения.",
     price: 79,
     imageSrc: "https://images.unsplash.com/photo-1500673922987-e212871fec22",
-    level: "Beginner" as const,
-    duration: "12 hours",
+    level: "Начальный" as const,
+    duration: "12 часов",
   },
   {
     id: 2,
-    title: "Advanced Lighting Techniques",
-    instructor: "Michael Chen",
-    description: "Take your lighting skills to the next level with advanced techniques for portraiture and product photography.",
+    title: "Продвинутые техники освещения",
+    instructor: "Майкл Чен",
+    description: "Поднимите свои навыки освещения на новый уровень с помощью продвинутых техник для портретной и предметной фотографии.",
     price: 129,
     imageSrc: "https://images.unsplash.com/photo-1469474968028-56623f02e42e",
-    level: "Advanced" as const,
-    duration: "20 hours",
+    level: "Продвинутый" as const,
+    duration: "20 часов",
   },
   {
     id: 3,
-    title: "Landscape Photography Masterclass",
-    instructor: "Sarah Johnson",
-    description: "Learn to capture breathtaking landscapes with proper technique, planning, and post-processing.",
+    title: "Мастер-класс по пейзажной фотографии",
+    instructor: "Сара Джонсон",
+    description: "Научитесь создавать захватывающие пейзажи с правильной техникой, планированием и постобработкой.",
     price: 99,
     imageSrc: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05",
-    level: "Intermediate" as const,
-    duration: "16 hours",
+    level: "Средний" as const,
+    duration: "16 часов",
   },
 ];
 
 const instructors = [
   {
-    name: "Anna Reynolds",
-    role: "Portrait Photographer",
-    bio: "Award-winning portrait photographer with 15+ years of experience teaching at prestigious art schools.",
+    name: "Анна Рейнольдс",
+    role: "Фотограф-портретист",
+    bio: "Награжденный фотограф-портретист с более чем 15-летним опытом преподавания в престижных художественных школах.",
     imageSrc: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
     socialLinks: {
       twitter: "#",
@@ -53,9 +52,9 @@ const instructors = [
     }
   },
   {
-    name: "Michael Chen",
-    role: "Commercial Photographer",
-    bio: "Former National Geographic photographer specializing in commercial and product photography for global brands.",
+    name: "Майкл Чен",
+    role: "Коммерческий фотограф",
+    bio: "Бывший фотограф National Geographic, специализирующийся на коммерческой и предметной фотографии для мировых брендов.",
     imageSrc: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
     socialLinks: {
       twitter: "#",
@@ -64,9 +63,9 @@ const instructors = [
     }
   },
   {
-    name: "Sarah Johnson",
-    role: "Landscape Photographer",
-    bio: "Renowned landscape photographer whose work has been featured in major publications and galleries worldwide.",
+    name: "Сара Джонсон",
+    role: "Фотограф-пейзажист",
+    bio: "Известный фотограф-пейзажист, чьи работы были опубликованы в крупных изданиях и выставлены в галереях по всему миру.",
     imageSrc: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
     socialLinks: {
       instagram: "#",
@@ -77,21 +76,21 @@ const instructors = [
 
 const testimonials = [
   {
-    name: "David Smith",
-    title: "Amateur Photographer",
-    content: "The Photography Fundamentals course completely transformed how I approach composition. My photos now tell compelling stories I never thought I could capture.",
+    name: "Дэвид Смит",
+    title: "Любитель фотографии",
+    content: "Курс «Основы фотографии» полностью изменил мой подход к композиции. Мои фотографии теперь рассказывают захватывающие истории, которые я никогда не думал, что смогу запечатлеть.",
     imageUrl: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21"
   },
   {
-    name: "Emily Lee",
-    title: "Wedding Photographer",
-    content: "Taking the Advanced Lighting Techniques course was the best career decision I've made. My clients have noticed a significant improvement in my work.",
+    name: "Эмили Ли",
+    title: "Фотограф свадеб",
+    content: "Прохождение курса «Продвинутые техники освещения» стало лучшим решением в моей карьере. Мои клиенты заметили значительное улучшение в моей работе.",
     imageUrl: "https://images.unsplash.com/photo-1426604966848-d7adac402bff"
   },
   {
-    name: "Jason Wong",
-    title: "Travel Blogger",
-    content: "The Landscape Photography Masterclass taught me techniques that elevated my travel photography. I've gained 50k new followers thanks to these new skills.",
+    name: "Джейсон Вонг",
+    title: "Тревел-блогер",
+    content: "Мастер-класс по пейзажной фотографии научил меня техникам, которые подняли мою тревел-фотографию на новый уровень. Я набрал 50 тысяч новых подписчиков благодаря этим навыкам.",
     imageUrl: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6"
   },
 ];
@@ -115,20 +114,20 @@ const Index = () => {
         <div className="container-custom">
           <div className="max-w-2xl text-white">
             <span className={`inline-block text-sm font-medium px-3 py-1 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full mb-6 ${isLoaded ? 'animate-fade-in' : 'opacity-0'}`}>
-              Elevate Your Photography Skills
+              Повышайте свои навыки фотографии
             </span>
             <h1 className={`font-serif text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight mb-6 ${isLoaded ? 'animate-slide-in' : 'opacity-0'}`}>
-              Master the Art of <span className="text-white">Photography</span>
+              Овладейте искусством <span className="text-white">фотографии</span>
             </h1>
             <p className={`text-lg text-white/80 mb-8 ${isLoaded ? 'animate-slide-in' : 'opacity-0'}`} style={{ animationDelay: '0.1s' }}>
-              Learn from award-winning photographers and transform your passion into stunning visual stories.
+              Учитесь у фотографов с мировым именем и превращайте свою страсть в потрясающие визуальные истории.
             </p>
             <div className={`flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 ${isLoaded ? 'animate-slide-in' : 'opacity-0'}`} style={{ animationDelay: '0.2s' }}>
               <Link to="/courses" className="btn-primary px-8">
-                Explore Courses
+                Исследовать курсы
               </Link>
               <Link to="/about" className="inline-flex items-center justify-center h-11 px-8 font-medium tracking-wide text-white transition duration-300 rounded-md bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20">
-                Learn More
+                Узнать больше
               </Link>
             </div>
           </div>
@@ -144,9 +143,9 @@ const Index = () => {
       <section className="py-20 bg-secondary/30">
         <div className="container-custom">
           <div className="text-center mb-16 reveal">
-            <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-4">Why Choose PhotoMasters</h2>
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-4">Почему выбирают PhotoMasters</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Our courses combine industry expertise with hands-on learning to deliver an unmatched educational experience.
+              Наши курсы сочетают отраслевой опыт с практическим обучением, обеспечивая непревзойденный образовательный опыт.
             </p>
           </div>
           
@@ -157,9 +156,9 @@ const Index = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                 </svg>
               </div>
-              <h3 className="font-serif text-xl font-semibold mb-3">Expert Instructors</h3>
+              <h3 className="font-serif text-xl font-semibold mb-3">Экспертные инструкторы</h3>
               <p className="text-muted-foreground">
-                Learn from award-winning photographers with decades of experience in various photography niches.
+                Учитесь у фотографов с наградами, имеющих десятилетия опыта в различных областях фотографии.
               </p>
             </div>
             
@@ -169,9 +168,9 @@ const Index = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                 </svg>
               </div>
-              <h3 className="font-serif text-xl font-semibold mb-3">Practical Assignments</h3>
+              <h3 className="font-serif text-xl font-semibold mb-3">Практические задания</h3>
               <p className="text-muted-foreground">
-                Apply what you learn through hands-on projects with personalized feedback from your instructors.
+                Применяйте полученные знания на практике с проектами и получайте персональную обратную связь.
               </p>
             </div>
             
@@ -181,9 +180,9 @@ const Index = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
                 </svg>
               </div>
-              <h3 className="font-serif text-xl font-semibold mb-3">Flexible Learning</h3>
+              <h3 className="font-serif text-xl font-semibold mb-3">Гибкое обучение</h3>
               <p className="text-muted-foreground">
-                Access course materials anytime, anywhere, and learn at your own pace with lifetime access.
+                Получите доступ к материалам курса в любое время и учитесь в своем темпе.
               </p>
             </div>
           </div>
@@ -195,9 +194,9 @@ const Index = () => {
         <div className="container-custom">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 reveal">
             <div>
-              <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-4">Featured Courses</h2>
+              <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-4">Популярные курсы</h2>
               <p className="text-muted-foreground max-w-2xl">
-                Discover our most popular photography courses taught by industry-leading professionals.
+                Откройте для себя наши самые популярные курсы фотографии, которые преподают ведущие профессионалы отрасли.
               </p>
             </div>
             <Link to="/courses" className="mt-4 md:mt-0 btn-secondary">
@@ -208,7 +207,16 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {courses.map((course, index) => (
               <div key={course.id} className="stagger-item reveal">
-                <CourseCard {...course} />
+                <CourseCard
+                  {...course}
+                  level={
+                    course.level === "Начальный"
+                      ? "Beginner"
+                      : course.level === "Средний"
+                      ? "Intermediate"
+                      : "Advanced"
+                  }
+                />
               </div>
             ))}
           </div>
@@ -219,9 +227,9 @@ const Index = () => {
       <section className="py-20 bg-secondary/30">
         <div className="container-custom">
           <div className="text-center mb-16 reveal">
-            <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-4">Meet Our Instructors</h2>
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-4">Наши инструкторы</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Learn from passionate photographers who have mastered their craft and are eager to share their knowledge.
+              Учитесь у увлеченных фотографов, которые освоили свое ремесло и готовы поделиться своими знаниями.
             </p>
           </div>
           
@@ -245,9 +253,9 @@ const Index = () => {
       <section className="py-20">
         <div className="container-custom">
           <div className="text-center mb-16 reveal">
-            <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-4">What Our Students Say</h2>
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-4">Отзывы наших студентов</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Read about the experiences of photographers who have taken our courses.
+              Прочитайте об опыте фотографов, которые прошли наши курсы.
             </p>
           </div>
           
@@ -265,12 +273,12 @@ const Index = () => {
       <section className="py-20 bg-primary text-white">
         <div className="container-custom">
           <div className="text-center max-w-3xl mx-auto reveal">
-            <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-6">Ready to Take Your Photography to the Next Level?</h2>
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-6">Готовы поднять свои навыки фотографии на новый уровень?</h2>
             <p className="text-white/80 mb-8">
-              Join thousands of photographers who have transformed their skills through our premium courses. Start your journey today.
+              Присоединяйтесь к тысячам фотографов, которые улучшили свои навыки с помощью наших премиальных курсов. Начните свой путь уже сегодня.
             </p>
             <Link to="/courses" className="inline-flex items-center justify-center h-12 px-8 font-medium tracking-wide text-primary transition duration-300 rounded-md bg-white hover:bg-gray-100 focus:shadow-outline focus:outline-none">
-              Browse All Courses
+              Просмотреть все курсы
             </Link>
           </div>
         </div>
